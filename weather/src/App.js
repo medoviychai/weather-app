@@ -1,4 +1,3 @@
-import Header from './pages/Header';
 import Footer from './pages/Footer';
 import TodayPage from './pages/TodayPage';
 import TomorrowPage from './pages/TomorrowPage';

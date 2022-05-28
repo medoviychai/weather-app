@@ -14,6 +14,10 @@
     border-radius: 50px;
 }
 
+/* .main-container {
+    background-color: #535353;
+} */
+
 aside {
     width: 30%;
 }
@@ -25,7 +29,7 @@ aside {
     gap: 30px;
 }
 
-.search-box {
+.search-box-desk {
     display: flex;
     justify-content: space-between;
 }
@@ -90,10 +94,20 @@ button {
 
 .hour-weather {
     border-radius: 20px;
-    padding: 5px 20px 5px 15px;
+    padding: 5px 15px 5px 15px;
     width: 8%;
 
     box-shadow: 6px 5px 11px 3px rgba(34, 60, 80, 0.11);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hour-weather:hover {
+    cursor: pointer;
+    position: relative;
+    bottom: 10px;
 }
 
 main {
@@ -116,6 +130,12 @@ main {
     box-shadow: 6px 5px 11px 3px rgba(34, 60, 80, 0.11);
 
     width: 15%;
+}
+
+.sun-highlights-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 a {
@@ -163,4 +183,174 @@ button {
 
 button:hover {
     background-color: rgb(220, 217, 217);
+}
+
+.mob-nav {
+    display: none;
+}
+
+@media(max-width: 1160px) {
+    .main-container {
+        width: 95%;
+    }
+
+    .hour-weather {
+        width: 50px;
+        flex-grow: 1;
+    }
+
+    .hourly-weather {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 800px) {
+    .main-container {
+        opacity: 0.9;
+        width: 100%;    
+        border-radius: 0;
+
+        transform: translate(0%, 0%);
+        position: static;
+    }
+    .main-container {
+        width: 100%;
+    }
+    .weather-container {
+        padding: 1em;
+        flex-direction: column;
+    }
+
+    .hourly-weather {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        margin-bottom: 0px;
+
+        text-align: center;
+    }
+    
+    .hour-weather {
+        border-radius: 0px;
+        padding: 5px 20px 5px 15px;
+        width: 75vw;
+    
+        box-shadow: 0 0 0 0;
+        /* border: 1px solid black; */
+
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .highlights {
+        display: none;
+    }
+    .highlights-title {
+        display: none;
+    }
+
+    aside {
+        width: 100%;
+    }
+
+    .desktop-nav {
+        display: none;
+    }
+
+    .mob-list-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        font-size: 25px;
+
+        border: 1px solid black;
+    }
+
+    .mob-nav {
+        display: block;
+        margin: 0;
+        /* align-items: flex-start; */
+    }
+
+    .search-box-desk {
+        display: none;
+    }
+
+    .search-icon {
+        width: 25px;
+        height: 25px;
+    }
+
+    .hidden-nav {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    /* #menu-toggle {
+        opacity: 0;
+        position: absolute;
+    }
+
+    .menu-button {
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 26px;
+        height: 26px;
+
+        z-index: 1;
+    }
+    .menu-button > span,
+    .menu-button > span::before,
+    .menu-button > span::after {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: #616161;
+    }
+    .menu-button > span::before {
+        content: '';
+        top: -8px;
+    }
+    .menu-button > span::after {
+        content: '';
+        top: 8px;
+    } */
+/* 
+    .mob-list-nav {
+        visibility: hidden;
+    }
+
+    #menu-toggle:checked ~ .menu-button > span {
+        transform: rotate(45deg);
+      }
+    #menu-toggle:checked ~ .menu-button > span::before {
+        top: 0;
+        transform: rotate(0);
+      }
+    #menu-toggle:checked ~ .menu-button > span::after {
+        top: 0;
+        transform: rotate(90deg);
+      }
+    #menu-toggle:checked ~ .mob-list-nav {
+        visibility: visible;
+      } */
+}
+
+.highlights-icons {
+    width: 30px;
+}
+
+.highlight-icon-value-box p{
+    margin: 5px 0 0 0;
+    text-align: end;
+    font-size: 18px;
+}
+
+.forecast-weather-icon {
+    width: 40px;
 }

@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function Header() {
+export default function HeaderDesk() {
   
    return(
-    <nav>
+    <nav className="desktop-nav"> 
       <ul>
         <li><Link to='/today'>Today</Link></li>
         <li><Link to='/tomorrow'>Tomorrow</Link></li>

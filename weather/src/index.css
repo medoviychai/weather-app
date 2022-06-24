@@ -9,7 +9,12 @@ body {
   font-size: 17px;
 }
 
-/* body {
-  background-color: #201F20;
-  color: rgb(229, 229, 229);
-} */
+input {
+  font-family: Josefin Sans;
+}
+
+@media (max-width: 800px) {
+  body {
+    background-color: white;
+  }
+}
